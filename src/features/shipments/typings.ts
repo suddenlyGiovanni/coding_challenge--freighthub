@@ -25,4 +25,4 @@ export interface Shipment {
   userId: string
 }
 
-export type Shipments = Shipment[]
+export type Shipments = readonly Shipment[]

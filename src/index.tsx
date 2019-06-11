@@ -6,7 +6,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import 'styles/index.css'
 
 import { store } from 'store'
-import { Home } from 'views/home-view/Home'
+import ShipmentListView from 'views/shipments-list-view/ShipmentListView'
+import ShipmentDetailView from 'views/shipment-detail-view/ShipmentDetailView'
+
 import * as serviceWorker from './serviceWorker'
 
 const rootElement = document.getElementById('root')
@@ -15,8 +17,9 @@ const Root: React.FC = () => (
   <Provider store={store}>
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={Home} />
-        <Route component={Home} />
+        <Route path="/" exact component={ShipmentListView} />
+        <Route path="/shipment/:id" component={ShipmentDetailView} />
+        <Route component={ShipmentListView} />
       </Switch>
     </BrowserRouter>
   </Provider>
