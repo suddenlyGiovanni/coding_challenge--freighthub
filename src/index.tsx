@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import 'styles/index.css'
 
 import { store } from 'store'
-import ShipmentListView from 'views/shipments-list-view/ShipmentListView'
+import ShipmentsListView from 'views/shipments-list-view/ShipmentsListView'
 import ShipmentDetailView from 'views/shipment-detail-view/ShipmentDetailView'
 
 import * as serviceWorker from './serviceWorker'
@@ -17,9 +17,9 @@ const Root: React.FC = () => (
   <Provider store={store}>
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={ShipmentListView} />
+        <Route path="/" exact component={ShipmentsListView} />
         <Route path="/shipment/:id" component={ShipmentDetailView} />
-        <Route component={ShipmentListView} />
+        <Route component={ShipmentsListView} />
       </Switch>
     </BrowserRouter>
   </Provider>
