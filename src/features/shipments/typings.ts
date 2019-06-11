@@ -1,12 +1,12 @@
-type Mode = 'sea' | 'air'
-type Type = 'FCL' | 'LCL'
-type Status = 'ACTIVE' | 'COMPLETED'
-interface Cargo {
+export type Mode = 'sea' | 'air' | 'rail'
+export type Type = 'FCL' | 'LCL'
+export type Status = 'ACTIVE' | 'COMPLETED'
+export interface Cargo {
   type: string
   description: string
   volume: number
 }
-interface Service {
+export interface Service {
   type: string
   value?: number
 }

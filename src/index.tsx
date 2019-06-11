@@ -2,26 +2,27 @@ import * as React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { StylesProvider } from '@material-ui/styles'
 
 import 'styles/index.css'
+import * as serviceWorker from './serviceWorker'
 
 import { store } from 'store'
-import ShipmentsListView from 'views/shipments-list-view/ShipmentsListView'
-import ShipmentDetailView from 'views/shipment-detail-view/ShipmentDetailView'
-
-import * as serviceWorker from './serviceWorker'
+import { ShipmentDetailView, ShipmentsView } from 'views'
 
 const rootElement = document.getElementById('root')
 
 const Root: React.FC = () => (
   <Provider store={store}>
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={ShipmentsListView} />
-        <Route path="/shipment/:id" component={ShipmentDetailView} />
-        <Route component={ShipmentsListView} />
-      </Switch>
-    </BrowserRouter>
+    <StylesProvider injectFirst>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={ShipmentsView} />
+          <Route path="/shipment/:id" component={ShipmentDetailView} />
+          <Route component={ShipmentsView} />
+        </Switch>
+      </BrowserRouter>
+    </StylesProvider>
   </Provider>
 )
 

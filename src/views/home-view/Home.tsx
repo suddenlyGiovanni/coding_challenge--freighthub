@@ -5,7 +5,7 @@ import styled from '@emotion/styled/macro'
 
 import { Header } from 'views/home-view/header/Header'
 import { Main } from 'views/home-view/main/Main'
-import { ConnectedDuck } from 'components/duck'
+import { Duck } from 'components'
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -45,7 +45,7 @@ export const Home: React.FC<RouteChildrenProps> = () => {
           </ListElement>
         </ElementContainer>
         <Switch>
-          <Route path="/duck" component={ConnectedDuck} />
+          <Route path="/duck" component={Duck} />
         </Switch>
       </Main>
     </HomeWrapper>

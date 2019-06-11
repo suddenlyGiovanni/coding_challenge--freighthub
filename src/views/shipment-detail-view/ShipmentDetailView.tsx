@@ -24,7 +24,6 @@ type ReduxProps = ReturnType<typeof mapStateToProps>
 
 type Props = RouterProps & ReduxProps
 export const ShipmentDetailView: React.FC<Props> = ({ match, shipment }) => {
-  console.log('ShipmentDetailView - shipment: ', shipment)
   return (
     <div>
       <h1> ShipmentDetailView</h1>
