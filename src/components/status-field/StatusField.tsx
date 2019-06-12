@@ -23,7 +23,7 @@ const useStyles = makeStyles(
 type State = 'ACTIVE' | 'COMPLETED' | 'ALL'
 
 interface Props {
-  onChange: (value: string) => void
+  onChange: (value: State) => void
   initialValue?: State
 }
 

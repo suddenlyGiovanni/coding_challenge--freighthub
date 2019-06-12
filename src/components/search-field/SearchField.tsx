@@ -6,9 +6,13 @@ import Search from '@material-ui/icons/Search'
 
 interface Props {
   onSearchChange: (value: string) => void
+  initialValue?: string
 }
 
-export const SearchField: React.FC<Props> = ({ onSearchChange }) => {
+export const SearchField: React.FC<Props> = ({
+  onSearchChange,
+  initialValue = '',
+}) => {
   const [value, setValue] = React.useState('')
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

@@ -1,8 +1,10 @@
 import * as React from 'react'
+import { useDispatch } from 'react-redux'
 import styled from '@emotion/styled/macro'
 import debounce from 'lodash.debounce'
 
 import { SearchField, ShipmentMode, StatusField } from 'components'
+import { filterActions } from 'features/filter'
 
 const SearchBarContainer = styled.div`
   display: flex;
@@ -14,24 +16,31 @@ const SearchBarContainer = styled.div`
   padding: 10px 0;
   margin-bottom: 20px;
 `
-interface Props {
-  onSearchChange: (value: string) => void
-  onStatusChange: (value: any) => void
-  onModeChange: (value: any) => void
-}
 
-export const SearchBar: React.FC<Props> = ({
-  onSearchChange,
-  onStatusChange,
-  onModeChange,
-}) => {
+export const SearchBar: React.FC = () => {
+  const dispatch = useDispatch()
+
   return (
     <SearchBarContainer>
       <SearchField
-        onSearchChange={debounce((value: string) => onSearchChange(value), 500)}
+        initialValue={''}
+        onSearchChange={debounce(
+          (name: string) => dispatch(filterActions.setFilter({ name })),
+          500
+        )}
       />
-      <ShipmentMode onChange={onModeChange} />
-      <StatusField onChange={onStatusChange} />
+      <ShipmentMode
+        onChange={mode => dispatch(filterActions.setFilter({ mode }))}
+        initialValues={{
+          sea: true,
+          air: true,
+          rail: true,
+        }}
+      />
+      <StatusField
+        onChange={status => dispatch(filterActions.setFilter({ status }))}
+        initialValue={'ALL'}
+      />
     </SearchBarContainer>
   )
 }

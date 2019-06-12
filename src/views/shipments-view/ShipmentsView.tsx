@@ -35,31 +35,9 @@ type ReduxProps = ReturnType<typeof mapStateToProps> & typeof mapDispatchToProps
 
 type Props = RouteChildrenProps & ReduxProps
 
-interface State {
-  value: string
-  status: string
-  mode: any
-}
-
-export class ShipmentsView extends React.Component<Props, State> {
-  public state: State = {
-    value: '',
-    status: 'ALL',
-    mode: {},
-  }
-
+export class ShipmentsView extends React.Component<Props> {
   public componentDidMount() {
     this.props.fetchShipments()
-  }
-
-  public handleSearchChange = (value: string): void => {
-    this.setState({ value }, () => console.log(this.state))
-  }
-  public handleStatusChange = (status: any): void => {
-    this.setState({ status }, () => console.log(this.state))
-  }
-  public handleModeChange = (mode: any): void => {
-    this.setState({ mode }, () => console.log(this.state))
   }
 
   public routeToDetails = (shipmentId: string): void => {
@@ -73,11 +51,7 @@ export class ShipmentsView extends React.Component<Props, State> {
           Shipments
         </Typography>
         <Container maxWidth={'md'}>
-          <SearchBar
-            onSearchChange={this.handleSearchChange}
-            onStatusChange={this.handleStatusChange}
-            onModeChange={this.handleModeChange}
-          />
+          <SearchBar />
           <ShipmentsListContainer
             shipments={this.props.shipments}
             onSelectedShipment={this.routeToDetails}
