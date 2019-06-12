@@ -24,7 +24,7 @@ const ViewContainer = styled.div`
 `
 
 function mapStateToProps(state: RootState) {
-  return { shipments: shipmentsSelectors.getShipments(state) }
+  return { shipments: shipmentsSelectors.getFilteredShipments(state) }
 }
 
 const mapDispatchToProps = {
