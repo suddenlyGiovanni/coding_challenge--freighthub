@@ -7,6 +7,8 @@ import { RootState } from 'typesafe-actions'
 import styled from '@emotion/styled/macro'
 import { css, jsx } from '@emotion/core'
 
+import _ from 'lodash'
+
 import Typography from '@material-ui/core/Typography'
 
 import { ViewContainer, EditNameDialog } from 'components'
@@ -24,13 +26,52 @@ const ShipmentId = styled.span`
   color: #3f51b5;
 `
 
-interface RouteParams {
-  id: string
+const RowContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  width: 100%;
+  margin: 5px 0;
+
+  text-align: left;
+
+  border-bottom: solid thin lightgray;
+
+  justify-items: flex-start;
+`
+
+const Column = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 1;
+
+  width: 100%;
+  min-width: 130px;
+  min-height: 1.6rem;
+  margin: 4px 0;
+`
+
+const Row: React.FC<{ name: string; value: string }> = ({ name, value }) => {
+  return (
+    <RowContainer>
+      <Column>
+        <Typography color="textSecondary">{name}</Typography>
+      </Column>
+      <Column>
+        <Typography>{value}</Typography>
+      </Column>
+    </RowContainer>
+  )
 }
 
-export const ShipmentDetailView: React.FC<RouteChildrenProps<RouteParams>> = ({
-  match,
-}) => {
+export const ShipmentDetailView: React.FC<
+  RouteChildrenProps<{ id: string }>
+> = ({ match }) => {
+  // HOOKS:
   const [open, setOpen] = React.useState(false)
   const dispatch = useDispatch()
   const shipment = useSelector((state: RootState) => {
@@ -40,8 +81,20 @@ export const ShipmentDetailView: React.FC<RouteChildrenProps<RouteParams>> = ({
     )
   })
 
+  // EARLY RETURN
   if (!shipment) return null
 
+  // HANDLER & VARIABLES
+  const handleOnNameEdit = (name: string): void => {
+    dispatch(shipmentsActions.editShipmentName({ name, id: shipment.id }))
+  }
+
+  const customs = _.some(shipment.services, ['type', 'customs']) ? 'yes' : 'no'
+  const insurance = _.some(shipment.services, ['type', 'insurance'])
+    ? 'yes'
+    : 'no'
+
+  // VIEW
   return (
     <ViewContainer title={'Shipment Details'}>
       <Shipment component="h2" variant="h4">
@@ -63,20 +116,24 @@ export const ShipmentDetailView: React.FC<RouteChildrenProps<RouteParams>> = ({
           }
         />
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            test
-          </Typography>
-          <p>id: {shipment.id}</p>
-          <p>name: {shipment.name}</p>
+          <Row name={'Customer reference'} value={shipment.userId} />
+          <Row name={'Status'} value={shipment.status} />
+          <Row name={'Booking Date'} value={''} />
+          <Row name={'Carrier'} value={shipment.mode} />
+          <Row name={'Type'} value={shipment.type} />
+          <Row name={'Customs'} value={customs} />
+          <Row name={'Insurance'} value={insurance} />
+          <Row name={'Inspection'} value={''} />
+          <Row name={'Dangerous Goods'} value={'no'} />
+          <Row name={'Special Equipment'} value={'no'} />
+          <Row name={'Total Cost'} value={`${shipment.total} currency`} />
         </CardContent>
       </Card>
       <EditNameDialog
         open={open}
         onClose={() => setOpen(false)}
         shipmentName={shipment.name}
-        onNameEdit={name =>
-          dispatch(shipmentsActions.editShipmentName({ name, id: shipment.id }))
-        }
+        onNameEdit={handleOnNameEdit}
       />
     </ViewContainer>
   )

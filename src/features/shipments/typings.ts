@@ -1,4 +1,8 @@
 export type Mode = 'sea' | 'air' | 'rail'
+/**
+ * LCL = less than container load
+ * FCL = full container load
+ */
 export type Type = 'FCL' | 'LCL'
 export type Status = 'ACTIVE' | 'COMPLETED'
 export interface Cargo {
