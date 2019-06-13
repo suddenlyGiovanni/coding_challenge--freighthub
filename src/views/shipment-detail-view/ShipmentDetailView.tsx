@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { RouteChildrenProps } from 'react-router'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from 'typesafe-actions'
 import styled from '@emotion/styled/macro'
 import { css, jsx } from '@emotion/core'
@@ -10,7 +10,7 @@ import { css, jsx } from '@emotion/core'
 import Typography from '@material-ui/core/Typography'
 
 import { ViewContainer, EditNameDialog } from 'components'
-import { shipmentsSelectors } from 'features/shipments'
+import { shipmentsSelectors, shipmentsActions } from 'features/shipments'
 
 import Card from '@material-ui/core/Card'
 import CardHeader from '@material-ui/core/CardHeader'
@@ -31,14 +31,14 @@ interface RouteParams {
 export const ShipmentDetailView: React.FC<RouteChildrenProps<RouteParams>> = ({
   match,
 }) => {
+  const [open, setOpen] = React.useState(false)
+  const dispatch = useDispatch()
   const shipment = useSelector((state: RootState) => {
     return shipmentsSelectors.getShipmentByID(
       state,
       (match && match.params.id) || ''
     )
   })
-
-  const [open, setOpen] = React.useState(false)
 
   if (!shipment) return null
 
@@ -74,7 +74,9 @@ export const ShipmentDetailView: React.FC<RouteChildrenProps<RouteParams>> = ({
         open={open}
         onClose={() => setOpen(false)}
         shipmentName={shipment.name}
-        onNameEdit={console.log}
+        onNameEdit={name =>
+          dispatch(shipmentsActions.editShipmentName({ name, id: shipment.id }))
+        }
       />
     </ViewContainer>
   )

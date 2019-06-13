@@ -14,9 +14,30 @@ export const shipmentsReducer: Reducer<ShipmentsState, ShipmentsAction> = (
   state = initialState,
   action
 ) => {
-  if (action.type === getType(shipmentsActions.setShipments)) {
-    return [...action.payload.shipments]
-  }
+  switch (action.type) {
+    case getType(shipmentsActions.setShipments): {
+      return [...action.payload.shipments]
+    }
 
-  return state
+    case getType(shipmentsActions.editShipmentName): {
+      const { id, name } = action.payload
+      return state.map(storeShipment => {
+        return storeShipment.id === id
+          ? { ...storeShipment, name } //
+          : storeShipment //
+      })
+    }
+
+    case getType(shipmentsActions.setShipment): {
+      const { shipment } = action.payload
+      return state.map(storeShipment => {
+        return storeShipment.id === shipment.id
+          ? shipment //
+          : storeShipment //
+      })
+    }
+
+    default:
+      return state
+  }
 }

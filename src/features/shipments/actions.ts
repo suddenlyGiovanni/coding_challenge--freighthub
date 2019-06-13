@@ -22,3 +22,15 @@ export const setShipments = createAction(
     }
   }
 )
+
+export const editShipmentName = createAction(
+  shipmentsTypes.EDIT_NAME,
+  action => {
+    return ({ name, id }: { name: string; id: string }) => action({ name, id })
+  }
+)
+
+export const setShipment = createAction(shipmentsTypes.SET_SHIPMENT, action => {
+  return ({ data }: { data: ShipmentsTypes.Shipment }) =>
+    action({ shipment: data })
+})
