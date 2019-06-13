@@ -25,18 +25,19 @@ const ListContainer = styled.ul`
 `
 
 interface Props {
-  shipments: Shipments
+  shipments: Shipments[]
   onSelectedShipment: (shipmentId: string) => void
 }
 
 export const ShipmentsListContainer: React.FC<Props> = ({
-  shipments = [],
+  shipments,
   onSelectedShipment,
 }) => {
   return (
     <ListContainer>
       {shipments &&
-        shipments.map(shipment => (
+        shipments[0] &&
+        shipments[0].map(shipment => (
           <ShipmentsListElement
             key={shipment.id}
             shipment={shipment}

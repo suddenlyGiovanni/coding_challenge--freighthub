@@ -1,4 +1,6 @@
+import _ from 'lodash'
 import { RootState } from 'typesafe-actions'
+
 import { Shipment, Shipments } from './typings'
 import { filterSelectors } from 'features/filter'
 
@@ -23,7 +25,8 @@ export const getFilteredShipments = (state: RootState) => {
     (acc, [key, val]) => (val ? [...acc, key] : acc),
     []
   )
-  return shipments.filter(shipment => {
+
+  const filteredShipments = shipments.filter(shipment => {
     const checkId = (): boolean => {
       if (id === '') return true
       return shipment.id.toLocaleLowerCase().includes(id.toLocaleLowerCase())
@@ -40,4 +43,8 @@ export const getFilteredShipments = (state: RootState) => {
 
     return checkId() && checkStatus() && checkMode()
   })
+
+  // group by 20 el.
+
+  return _.chunk(filteredShipments, 20)
 }
