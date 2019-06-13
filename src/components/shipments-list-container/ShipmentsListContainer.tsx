@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled/macro'
+import Pagination from 'material-ui-flat-pagination'
 
 import { Shipments } from 'features/shipments/typings'
 import { ShipmentsListElement } from 'components'
@@ -24,6 +25,24 @@ const ListContainer = styled.ul`
   padding-inline-start: 0;
 `
 
+export const Page: React.FC<{
+  shipments: Shipments
+  onSelectedShipment: (shipmentId: string) => void
+}> = ({ shipments, onSelectedShipment }) => {
+  return (
+    <ListContainer>
+      {shipments &&
+        shipments.map(shipment => (
+          <ShipmentsListElement
+            key={shipment.id}
+            shipment={shipment}
+            onClick={onSelectedShipment}
+          />
+        ))}
+    </ListContainer>
+  )
+}
+
 interface Props {
   shipments: Shipments[]
   onSelectedShipment: (shipmentId: string) => void
@@ -33,17 +52,24 @@ export const ShipmentsListContainer: React.FC<Props> = ({
   shipments,
   onSelectedShipment,
 }) => {
+  const [offset, setOffset] = React.useState(0)
+  const pages = shipments.length
+
   return (
-    <ListContainer>
-      {shipments &&
-        shipments[0] &&
-        shipments[0].map(shipment => (
-          <ShipmentsListElement
-            key={shipment.id}
-            shipment={shipment}
-            onClick={onSelectedShipment}
-          />
-        ))}
-    </ListContainer>
+    <div>
+      <Pagination
+        limit={1}
+        offset={offset}
+        total={pages}
+        onClick={(e, offset) => setOffset(offset)}
+      />
+
+      {shipments && (
+        <Page
+          shipments={shipments[offset]}
+          onSelectedShipment={onSelectedShipment}
+        />
+      )}
+    </div>
   )
 }
