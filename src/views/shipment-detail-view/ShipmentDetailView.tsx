@@ -11,7 +11,7 @@ import _ from 'lodash'
 
 import Typography from '@material-ui/core/Typography'
 
-import { ViewContainer, EditNameDialog } from 'components'
+import { ViewContainer, EditNameDialog, TransitOverview } from 'components'
 import { shipmentsSelectors, shipmentsActions } from 'features/shipments'
 
 import Card from '@material-ui/core/Card'
@@ -103,7 +103,11 @@ export const ShipmentDetailView: React.FC<
       <Link to={'/'}>
         <Typography variant="caption">&#60; Back to list</Typography>
       </Link>
-      <Card>
+      <Card
+        css={css`
+          margin-top: 30px;
+        `}
+      >
         <CardHeader
           title={shipment.name}
           css={css`
@@ -116,6 +120,11 @@ export const ShipmentDetailView: React.FC<
           }
         />
         <CardContent>
+          <TransitOverview
+            cargo={shipment.cargo}
+            origin={shipment.origin}
+            destination={shipment.destination}
+          />
           <Row name={'Customer reference'} value={shipment.userId} />
           <Row name={'Status'} value={shipment.status} />
           <Row name={'Booking Date'} value={''} />

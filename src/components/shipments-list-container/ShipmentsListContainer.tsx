@@ -25,6 +25,10 @@ const ListContainer = styled.ul`
   padding-inline-start: 0;
 `
 
+const PaginationStyled = styled(Pagination)`
+  text-align: center;
+`
+
 export const Page: React.FC<{
   shipments: Shipments
   onSelectedShipment: (shipmentId: string) => void
@@ -57,7 +61,7 @@ export const ShipmentsListContainer: React.FC<Props> = ({
 
   return (
     <div>
-      <Pagination
+      <PaginationStyled
         limit={1}
         offset={offset}
         total={pages}

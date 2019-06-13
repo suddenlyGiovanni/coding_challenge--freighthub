@@ -16,3 +16,4 @@ export { TransportMode } from 'components/transport-mode/TransportMode'
 export { ViewContainer } from 'components/view-container/ViewContainer'
 
 export { EditNameDialog } from 'components/edit-name-dialog/EditNameDialog'
+export { TransitOverview } from 'components/transit-overview/TransitOverview'
