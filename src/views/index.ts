@@ -1,6 +1,6 @@
 export { Home } from 'views/home-view/Home'
 export {
-  default as ShipmentDetailView,
+  ShipmentDetailView,
 } from 'views/shipment-detail-view/ShipmentDetailView'
 
-export { default as ShipmentsView } from 'views/shipments-view/ShipmentsView'
+export { ShipmentsView } from 'views/shipments-view/ShipmentsView'

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { RouteChildrenProps } from 'react-router'
+import { useSelector } from 'react-redux'
 
-import { connect } from 'react-redux'
 import { RootState } from 'typesafe-actions'
 
 import { shipmentsSelectors } from 'features/shipments'
@@ -10,20 +10,16 @@ interface RouteParams {
   id: string
 }
 
-type RouterProps = RouteChildrenProps<RouteParams>
+export const ShipmentDetailView: React.FC<RouteChildrenProps<RouteParams>> = ({
+  match,
+}) => {
+  const shipment = useSelector((state: RootState) => {
+    return shipmentsSelectors.getShipmentByID(
+      state,
+      (match && match.params.id) || ''
+    )
+  })
 
-function mapStateToProps(state: RootState, ownProps: RouterProps) {
-  const shipmentId =
-    (ownProps && ownProps.match && ownProps.match.params.id) || ''
-  return {
-    shipment: shipmentsSelectors.getShipmentByID(state, shipmentId),
-  }
-}
-
-type ReduxProps = ReturnType<typeof mapStateToProps>
-
-type Props = RouterProps & ReduxProps
-export const ShipmentDetailView: React.FC<Props> = ({ match, shipment }) => {
   return (
     <div>
       <h1> ShipmentDetailView</h1>
@@ -38,8 +34,3 @@ export const ShipmentDetailView: React.FC<Props> = ({ match, shipment }) => {
     </div>
   )
 }
-
-export default connect(
-  mapStateToProps,
-  null
-)(ShipmentDetailView)

@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { RouteChildrenProps } from 'react-router'
-import { connect } from 'react-redux'
-import { RootState } from 'typesafe-actions'
+import { useSelector, useDispatch, shallowEqual } from 'react-redux'
 import styled from '@emotion/styled/macro'
 
 import Typography from '@material-ui/core/Typography'
@@ -23,46 +22,37 @@ const ViewContainer = styled.div`
   text-align: center;
 `
 
-function mapStateToProps(state: RootState) {
-  return { shipments: shipmentsSelectors.getFilteredShipments(state) }
+export const ShipmentsView: React.FC<RouteChildrenProps> = ({ history }) => {
+  const dispatch = useDispatch()
+
+  const fetchShipments = React.useCallback(
+    () => dispatch(shipmentsActions.fetchShipments()),
+    [dispatch]
+  )
+
+  const shipments = useSelector(
+    shipmentsSelectors.getFilteredShipments,
+    shallowEqual
+  )
+
+  React.useEffect(() => {
+    fetchShipments()
+  }, [fetchShipments])
+
+  return (
+    <ViewContainer>
+      <Typography variant="h4" component="h2">
+        Shipments
+      </Typography>
+      <Container maxWidth={'md'}>
+        <SearchBar />
+        <ShipmentsListContainer
+          shipments={shipments}
+          onSelectedShipment={shipmentId =>
+            history.push(`/shipment/${shipmentId}`)
+          }
+        />
+      </Container>
+    </ViewContainer>
+  )
 }
-
-const mapDispatchToProps = {
-  fetchShipments: shipmentsActions.fetchShipments,
-}
-
-type ReduxProps = ReturnType<typeof mapStateToProps> & typeof mapDispatchToProps
-
-type Props = RouteChildrenProps & ReduxProps
-
-export class ShipmentsView extends React.Component<Props> {
-  public componentDidMount() {
-    this.props.fetchShipments()
-  }
-
-  public routeToDetails = (shipmentId: string): void => {
-    this.props.history.push(`/shipment/${shipmentId}`)
-  }
-
-  public render() {
-    return (
-      <ViewContainer>
-        <Typography variant="h4" component="h2">
-          Shipments
-        </Typography>
-        <Container maxWidth={'md'}>
-          <SearchBar />
-          <ShipmentsListContainer
-            shipments={this.props.shipments}
-            onSelectedShipment={this.routeToDetails}
-          />
-        </Container>
-      </ViewContainer>
-    )
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ShipmentsView)
