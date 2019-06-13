@@ -24,9 +24,9 @@ export const SearchBar: React.FC = () => {
   return (
     <SearchBarContainer>
       <SearchField
-        initialValue={dataFilter.name}
+        initialValue={dataFilter.id}
         onSearchChange={_.debounce(
-          (name: string) => dispatch(filterActions.setFilter({ name })),
+          (id: string) => dispatch(filterActions.setFilter({ id })),
           500
         )}
       />

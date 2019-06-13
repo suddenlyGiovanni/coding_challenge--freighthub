@@ -17,18 +17,16 @@ export const getShipmentByID = (
 
 export const getFilteredShipments = (state: RootState) => {
   const shipments = getShipments(state)
-  const { name, mode, status } = filterSelectors.getFilter(state)
+  const { id, mode, status } = filterSelectors.getFilter(state)
 
   const modes = Object.entries(mode).reduce<string[]>(
     (acc, [key, val]) => (val ? [...acc, key] : acc),
     []
   )
   return shipments.filter(shipment => {
-    const checkName = (): boolean => {
-      if (name === '') return true
-      return shipment.name
-        .toLocaleLowerCase()
-        .includes(name.toLocaleLowerCase())
+    const checkId = (): boolean => {
+      if (id === '') return true
+      return shipment.id.toLocaleLowerCase().includes(id.toLocaleLowerCase())
     }
 
     const checkStatus = (): boolean => {
@@ -40,6 +38,6 @@ export const getFilteredShipments = (state: RootState) => {
       return modes.includes(shipment.mode)
     }
 
-    return checkName() && checkStatus() && checkMode()
+    return checkId() && checkStatus() && checkMode()
   })
 }

@@ -1,5 +1,5 @@
 export interface Filter {
-  name: string
+  id: string
   mode: {
     sea: boolean
     air: boolean

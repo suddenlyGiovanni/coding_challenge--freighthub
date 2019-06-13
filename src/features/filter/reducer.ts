@@ -9,7 +9,7 @@ export type FilterAction = ActionType<typeof filterActions>
 export type FilterState = Readonly<FilterTypes.Filter>
 
 const initialState: FilterState = {
-  name: '',
+  id: '',
   mode: {
     air: true,
     sea: true,
