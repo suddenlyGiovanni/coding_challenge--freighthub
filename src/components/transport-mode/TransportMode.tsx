@@ -6,7 +6,7 @@ import Ship from '@material-ui/icons/DirectionsBoat'
 
 import { Mode } from 'features/shipments/typings'
 
-interface Props {
+export interface Props {
   mode: Mode
   onClick?: () => void
   checked?: boolean
@@ -21,10 +21,24 @@ export const TransportMode: React.FC<Props> = ({
 
   switch (mode) {
     case 'air':
-      return <Plane onClick={handleClick} color={setColor} />
+      return (
+        <Plane
+          onClick={handleClick}
+          color={setColor}
+          data-testid="plane-icon"
+        />
+      )
     case 'sea':
-      return <Ship onClick={handleClick} color={setColor} />
+      return (
+        <Ship onClick={handleClick} color={setColor} data-testid="ship-icon" />
+      )
     case 'rail':
-      return <Train onClick={handleClick} color={setColor} />
+      return (
+        <Train
+          onClick={handleClick}
+          color={setColor}
+          data-testid="train-icon"
+        />
+      )
   }
 }

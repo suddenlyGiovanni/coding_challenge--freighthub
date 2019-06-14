@@ -7,14 +7,13 @@ import Typography from '@material-ui/core/Typography'
 const LocationContainer = styled.div`
   position: relative;
   display: block;
-  /* background-color: papayawhip; */
 `
 const PlaceName = styled(Typography)`
   position: absolute;
   bottom: -23px;
 `
 
-interface Props {
+export interface Props {
   name: string
   active: boolean
   alignment: 'left' | 'right'
@@ -30,6 +29,7 @@ export const Location: React.FC<Props> = ({ name, active, alignment }) => {
         style={{
           [alignment]: 0,
         }}
+        data-testid="place-name"
       >
         {name}
       </PlaceName>

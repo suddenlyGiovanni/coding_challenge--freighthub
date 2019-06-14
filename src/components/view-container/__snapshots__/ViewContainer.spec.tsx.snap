@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewContainer snapshot 1`] = `
+<div>
+  <div
+    class="css-1fxgc9z-Main e17jzkjo0"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h4"
+    >
+      title
+    </h2>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthMd"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;

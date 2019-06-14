@@ -24,7 +24,7 @@ const Temp = styled.div`
   flex: 1;
 `
 
-interface Props {
+export interface Props {
   status: Status
   origin: string
   destination: string

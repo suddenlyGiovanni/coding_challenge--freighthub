@@ -22,7 +22,7 @@ const useStyles = makeStyles(
 
 type State = 'ACTIVE' | 'COMPLETED' | 'ALL'
 
-interface Props {
+export interface Props {
   onChange: (value: State) => void
   initialValue?: State
 }
@@ -34,7 +34,7 @@ export const StatusField: React.FC<Props> = ({
   const classes = useStyles()
   const [value, setValue] = React.useState(initialValue)
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const _value = event.target.value as State
     setValue(_value)
     onChange(_value)
@@ -49,6 +49,7 @@ export const StatusField: React.FC<Props> = ({
       value={value}
       onChange={handleChange}
       margin="none"
+      data-testid="status-select"
       SelectProps={{
         MenuProps: {
           className: classes.menu,

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatusField snapshot 1`] = `
+<div>
+  <div
+    class="MuiFormControl-root MuiTextField-root makeStyles-textField-1"
+    data-testid="status-select"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      for="status"
+    >
+      Status
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+    >
+      <div
+        class="MuiSelect-root"
+      >
+        <div
+          aria-haspopup="true"
+          aria-pressed="false"
+          class="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          role="button"
+          tabindex="0"
+        >
+          All
+        </div>
+        <input
+          id="status"
+          type="hidden"
+          value="ALL"
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;

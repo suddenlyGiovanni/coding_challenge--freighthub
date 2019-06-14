@@ -4,7 +4,7 @@ import InputAdornment from '@material-ui/core/InputAdornment'
 import IconButton from '@material-ui/core/IconButton'
 import Search from '@material-ui/icons/Search'
 
-interface Props {
+export interface Props {
   onSearchChange: (value: string) => void
   initialValue?: string
 }
