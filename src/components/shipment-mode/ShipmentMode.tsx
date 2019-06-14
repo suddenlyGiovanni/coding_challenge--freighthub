@@ -1,6 +1,5 @@
 import * as React from 'react'
 
-import { makeStyles, createStyles } from '@material-ui/core/styles'
 import FormControl from '@material-ui/core/FormControl'
 import FormGroup from '@material-ui/core/FormGroup'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
@@ -8,22 +7,13 @@ import Checkbox from '@material-ui/core/Checkbox'
 
 import { TransportMode } from 'components'
 
-const useStyles = makeStyles(
-  createStyles({
-    formGroup: {
-      display: 'flex',
-      flexDirection: 'row',
-    },
-  })
-)
-
 interface State {
   sea: boolean
   air: boolean
   rail: boolean
 }
 
-interface Props {
+export interface Props {
   initialValues?: State
   onChange: (values: State) => void
 }
@@ -31,7 +21,6 @@ export const ShipmentMode: React.FC<Props> = ({
   initialValues = { sea: true, air: true, rail: true },
   onChange,
 }) => {
-  const classes = useStyles()
   const [state, setState] = React.useState<State>(initialValues)
 
   const handleChange = (name: keyof State) => (
@@ -46,7 +35,7 @@ export const ShipmentMode: React.FC<Props> = ({
 
   return (
     <FormControl component="fieldset">
-      <FormGroup className={classes.formGroup}>
+      <FormGroup style={{ flexDirection: 'row' }}>
         <FormControlLabel
           control={
             <Checkbox

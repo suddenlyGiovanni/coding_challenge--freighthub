@@ -47,7 +47,7 @@ export const Page: React.FC<{
   )
 }
 
-interface Props {
+export interface Props {
   shipments: Shipments[]
   onSelectedShipment: (shipmentId: string) => void
 }
@@ -70,6 +70,7 @@ export const ShipmentsListContainer: React.FC<Props> = ({
 
       {shipments && (
         <Page
+          data-testid="page-container"
           shipments={shipments[offset]}
           onSelectedShipment={onSelectedShipment}
         />

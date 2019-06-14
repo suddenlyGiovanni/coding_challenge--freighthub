@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShipmentsListContainer snapshot 1`] = `
+<div>
+  <div>
+    <div
+      class="MuiFlatPagination-root css-3fu74t-PaginationStyled eolqklw1"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiFlatPageButton-root MuiFlatPageButton-rootEnd MuiFlatPagination-rootEnd MuiButton-text MuiFlatPageButton-text MuiFlatPagination-text MuiButton-textPrimary MuiFlatPageButton-textPrimary MuiFlatPagination-textPrimary Mui-disabled Mui-disabled Mui-disabled Mui-disabled"
+        disabled=""
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="MuiButton-label MuiFlatPageButton-label MuiFlatPagination-label"
+        >
+          &lt;
+        </span>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiFlatPageButton-root MuiFlatPageButton-rootCurrent MuiFlatPagination-rootCurrent MuiButton-text MuiFlatPageButton-text MuiFlatPagination-text MuiButton-textSecondary MuiFlatPageButton-textSecondary MuiFlatPagination-textSecondary"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label MuiFlatPageButton-label MuiFlatPagination-label"
+        >
+          1
+        </span>
+      </button>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiFlatPageButton-root MuiFlatPageButton-rootEnd MuiFlatPagination-rootEnd MuiButton-text MuiFlatPageButton-text MuiFlatPagination-text MuiButton-textPrimary MuiFlatPageButton-textPrimary MuiFlatPagination-textPrimary Mui-disabled Mui-disabled Mui-disabled Mui-disabled"
+        disabled=""
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="MuiButton-label MuiFlatPageButton-label MuiFlatPagination-label"
+        >
+          &gt;
+        </span>
+      </button>
+    </div>
+    <ul
+      class="css-ovij33-ListContainer eolqklw0"
+    >
+      <li
+        class="css-15dgqpj-ListElementContainer e1j9lps20"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+        >
+          <button
+            class="MuiButtonBase-root MuiCardActionArea-root"
+            data-testid="shipment-list-item"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="MuiCardContent-root css-1pkqxp1-StyledCardContent e1j9lps21"
+            >
+              <div
+                class="css-131dfi5-HeadingContainer e1j9lps22"
+              >
+                <div
+                  class="css-nsoenc-HeadingDetail e1j9lps23"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    data-testid="ship-icon"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.5L20 10.62V6c0-1.1-.9-2-2-2h-3V1H9v3H6c-1.1 0-2 .9-2 2v4.62l-1.29.42c-.26.08-.48.26-.6.5s-.15.52-.06.78L3.95 19zM6 6h12v3.97L12 8 6 9.97V6z"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root css-172tmyu-Heading e1j9lps24 MuiTypography-body1"
+                  >
+                    S1001
+                  </p>
+                </div>
+                <div
+                  class="css-nsoenc-HeadingDetail e1j9lps23"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2c-4.97 0-9 4.03-9 9 0 4.17 2.84 7.67 6.69 8.69L12 22l2.31-2.31C18.16 18.67 21 15.17 21 11c0-4.97-4.03-9-9-9zm0 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.3c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                    />
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root css-172tmyu-Heading e1j9lps24 MuiTypography-body1"
+                  >
+                    U1002
+                  </p>
+                </div>
+                <div
+                  class="css-nsoenc-HeadingDetail e1j9lps23"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 4v3h5.5v12h3V7H19V4z"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root css-172tmyu-Heading e1j9lps24 MuiTypography-body2 MuiTypography-noWrap"
+                  >
+                    New spring collection
+                  </p>
+                </div>
+              </div>
+              <div
+                class="css-1fo4s6c-TrackingContainer e1j9lps25"
+              >
+                <div
+                  class="css-1d6dqeu-OverviewContainer ecukxon0"
+                >
+                  <div
+                    class="css-178mkk4-LocationContainer e17eqbe40"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-colorPrimary"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M15 11V5l-3-3-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z"
+                      />
+                      <path
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root css-i8g5x1-PlaceName e17eqbe41 MuiTypography-body2 MuiTypography-noWrap"
+                      data-testid="place-name"
+                      style="left: 0px;"
+                    >
+                      Ningbo port
+                    </p>
+                  </div>
+                  <div
+                    class="css-ukvtdo-Temp ecukxon1"
+                  >
+                    <div
+                      aria-valuenow="50"
+                      class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-determinate"
+                      role="progressbar"
+                      style="margin: 0px 10px;"
+                    >
+                      <div
+                        class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        style="transform: translateX(-50%);"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="css-178mkk4-LocationContainer e17eqbe40"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M15 11V5l-3-3-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z"
+                      />
+                      <path
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root css-i8g5x1-PlaceName e17eqbe41 MuiTypography-body2 MuiTypography-noWrap"
+                      data-testid="place-name"
+                      style="right: 0px;"
+                    >
+                      Saarbrücker Str. 38, 10405 Berlin
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span
+              class="MuiCardActionArea-focusHighlight"
+            />
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </li>
+      <li
+        class="css-15dgqpj-ListElementContainer e1j9lps20"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
+        >
+          <button
+            class="MuiButtonBase-root MuiCardActionArea-root"
+            data-testid="shipment-list-item"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="MuiCardContent-root css-1pkqxp1-StyledCardContent e1j9lps21"
+            >
+              <div
+                class="css-131dfi5-HeadingContainer e1j9lps22"
+              >
+                <div
+                  class="css-nsoenc-HeadingDetail e1j9lps23"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    data-testid="plane-icon"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+                    />
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root css-172tmyu-Heading e1j9lps24 MuiTypography-body1"
+                  >
+                    S1002
+                  </p>
+                </div>
+                <div
+                  class="css-nsoenc-HeadingDetail e1j9lps23"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2c-4.97 0-9 4.03-9 9 0 4.17 2.84 7.67 6.69 8.69L12 22l2.31-2.31C18.16 18.67 21 15.17 21 11c0-4.97-4.03-9-9-9zm0 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.3c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                    />
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root css-172tmyu-Heading e1j9lps24 MuiTypography-body1"
+                  >
+                    U1001
+                  </p>
+                </div>
+                <div
+                  class="css-nsoenc-HeadingDetail e1j9lps23"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5 4v3h5.5v12h3V7H19V4z"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                  </svg>
+                  <p
+                    class="MuiTypography-root css-172tmyu-Heading e1j9lps24 MuiTypography-body2 MuiTypography-noWrap"
+                  >
+                    PO89634, PO27X
+                  </p>
+                </div>
+              </div>
+              <div
+                class="css-1fo4s6c-TrackingContainer e1j9lps25"
+              >
+                <div
+                  class="css-1d6dqeu-OverviewContainer ecukxon0"
+                >
+                  <div
+                    class="css-178mkk4-LocationContainer e17eqbe40"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-colorPrimary"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M15 11V5l-3-3-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z"
+                      />
+                      <path
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root css-i8g5x1-PlaceName e17eqbe41 MuiTypography-body2 MuiTypography-noWrap"
+                      data-testid="place-name"
+                      style="left: 0px;"
+                    >
+                      Shanghai Port
+                    </p>
+                  </div>
+                  <div
+                    class="css-ukvtdo-Temp ecukxon1"
+                  >
+                    <div
+                      aria-valuenow="100"
+                      class="MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-determinate"
+                      role="progressbar"
+                      style="margin: 0px 10px;"
+                    >
+                      <div
+                        class="MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate"
+                        style="transform: translateX(0%);"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="css-178mkk4-LocationContainer e17eqbe40"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-colorPrimary"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M15 11V5l-3-3-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z"
+                      />
+                      <path
+                        d="M0 0h24v24H0z"
+                        fill="none"
+                      />
+                    </svg>
+                    <p
+                      class="MuiTypography-root css-i8g5x1-PlaceName e17eqbe41 MuiTypography-body2 MuiTypography-noWrap"
+                      data-testid="place-name"
+                      style="right: 0px;"
+                    >
+                      Saarbrücker Str. 38, 10405 Berlin
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span
+              class="MuiCardActionArea-focusHighlight"
+            />
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

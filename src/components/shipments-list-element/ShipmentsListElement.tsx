@@ -70,7 +70,7 @@ const TrackingContainer = styled.div`
   height: 100%;
 `
 
-interface Props {
+export interface Props {
   shipment: Shipment
   onClick: (shipmentId: string) => void
 }
@@ -84,7 +84,10 @@ export const ShipmentsListElement: React.FC<Props> = ({
   return (
     <ListElementContainer>
       <Card>
-        <CardActionArea onClick={() => onClick(shipment.id)}>
+        <CardActionArea
+          onClick={() => onClick(shipment.id)}
+          data-testid="shipment-list-item"
+        >
           <StyledCardContent>
             <HeadingContainer>
               <HeadingDetail>

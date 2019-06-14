@@ -78,7 +78,7 @@ const CargoElement = styled.li`
   border-radius: 4px;
 `
 
-interface Props {
+export interface Props {
   origin: string
   destination: string
   cargo: Cargo[]

@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransportMode snapshot 1`] = `
+<div>
+  <div
+    class="css-13dubxn-OverviewContainer e10s3xmb0"
+  >
+    <div
+      class="css-cyp1hf-ElementContainer e10s3xmb1"
+    >
+      <div
+        class="css-dkiy58-CopyContainer e10s3xmb2"
+      >
+        <p
+          class="MuiTypography-root css-1z12hes-Copy e10s3xmb3 MuiTypography-body1"
+        >
+          Shanghai Port
+        </p>
+      </div>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+      />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+    </svg>
+    <div
+      class="css-cyp1hf-ElementContainer e10s3xmb1"
+    >
+      <ul
+        class="css-sk2nml-CargoList e10s3xmb4"
+      >
+        <li
+          class="css-4f9su3-CargoElement e10s3xmb5"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2"
+          >
+            1000 Blue T-shirts - 2vol
+          </p>
+        </li>
+        <li
+          class="css-4f9su3-CargoElement e10s3xmb5"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body2"
+          >
+            2000 Green T-shirts - 3vol
+          </p>
+        </li>
+      </ul>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+      />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+    </svg>
+    <div
+      class="css-cyp1hf-ElementContainer e10s3xmb1"
+    >
+      <div
+        class="css-dkiy58-CopyContainer e10s3xmb2"
+      >
+        <p
+          class="MuiTypography-root css-1z12hes-Copy e10s3xmb3 MuiTypography-body1"
+        >
+          Saarbrücker Str. 38, 10405 Berlin
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
