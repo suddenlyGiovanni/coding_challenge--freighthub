@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`feature: \`filter\` reducer initial state should match a snapshot 1`] = `
+Object {
+  "id": "",
+  "mode": Object {
+    "air": true,
+    "rail": true,
+    "sea": true,
+  },
+  "status": "ALL",
+}
+`;

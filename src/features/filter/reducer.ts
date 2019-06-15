@@ -23,7 +23,18 @@ export const filterReducer: Reducer<FilterState, FilterAction> = (
   action
 ) => {
   if (action.type === getType(filterActions.setFilter)) {
-    return { ...state, ...action.payload }
+    const { id, mode, status } = action.payload
+    return {
+      ...state,
+      id: id === undefined ? state.id : id,
+      status: status || state.status,
+      mode: mode
+        ? {
+            ...state.mode,
+            ...mode,
+          }
+        : state.mode,
+    }
   }
   return state
 }
