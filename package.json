@@ -1,17 +1,17 @@
 {
-  "name": "boilerplate--ts_project_starter-react",
+  "name": "coding_challenge--freighthub",
   "version": "1.0.8",
-  "description": "My highly opinionated starting point for a CRA TypeScript project",
+  "description": "FreightHub Frontend Coding Challenge",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suddenlyGiovanni/boilerplate--ts_project_starter-react.git"
+    "url": "git+https://github.com/suddenlyGiovanni/coding_challenge--freighthub.git"
   },
   "author": "suddenlyGiovanni <ravalico.giovanni@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/suddenlyGiovanni/boilerplate--ts_project_starter-react/issues"
+    "url": "https://github.com/suddenlyGiovanni/coding_challenge--freighthub/issues"
   },
-  "homepage": "https://github.com/suddenlyGiovanni/boilerplate--ts_project_starter-react#readme",
+  "homepage": "https://github.com/suddenlyGiovanni/coding_challenge--freighthub#readme",
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.12",
