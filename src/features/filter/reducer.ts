@@ -8,7 +8,7 @@ export type FilterAction = ActionType<typeof filterActions>
 
 export type FilterState = Readonly<FilterTypes.Filter>
 
-const initialState: FilterState = {
+export const initialState: FilterState = {
   id: '',
   mode: {
     air: true,
