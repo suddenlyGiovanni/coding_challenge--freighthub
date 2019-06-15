@@ -3,7 +3,7 @@
 exports[`Location snapshot 1`] = `
 <div>
   <div
-    class="css-178mkk4-LocationContainer e17eqbe40"
+    class="css-1satmnw-LocationContainer e1cot6dd0"
   >
     <svg
       aria-hidden="true"
@@ -21,7 +21,7 @@ exports[`Location snapshot 1`] = `
       />
     </svg>
     <p
-      class="MuiTypography-root css-i8g5x1-PlaceName e17eqbe41 MuiTypography-body2 MuiTypography-noWrap"
+      class="MuiTypography-root css-192817u-PlaceName e1cot6dd1 MuiTypography-body2 MuiTypography-noWrap"
       data-testid="place-name"
       style="left: 0px;"
     >

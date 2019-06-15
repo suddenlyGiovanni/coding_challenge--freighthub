@@ -3,16 +3,16 @@
 exports[`TransportMode snapshot 1`] = `
 <div>
   <div
-    class="css-13dubxn-OverviewContainer e10s3xmb0"
+    class="css-1gzjc7l-OverviewContainer eu79uap0"
   >
     <div
-      class="css-cyp1hf-ElementContainer e10s3xmb1"
+      class="css-1nd1wvf-ElementContainer eu79uap1"
     >
       <div
-        class="css-dkiy58-CopyContainer e10s3xmb2"
+        class="css-b182ra-CopyContainer eu79uap2"
       >
         <p
-          class="MuiTypography-root css-1z12hes-Copy e10s3xmb3 MuiTypography-body1"
+          class="MuiTypography-root css-1polke6-Copy eu79uap3 MuiTypography-body1"
         >
           Shanghai Port
         </p>
@@ -34,13 +34,13 @@ exports[`TransportMode snapshot 1`] = `
       />
     </svg>
     <div
-      class="css-cyp1hf-ElementContainer e10s3xmb1"
+      class="css-1nd1wvf-ElementContainer eu79uap1"
     >
       <ul
-        class="css-sk2nml-CargoList e10s3xmb4"
+        class="css-xy20c4-CargoList eu79uap4"
       >
         <li
-          class="css-4f9su3-CargoElement e10s3xmb5"
+          class="css-bru13b-CargoElement eu79uap5"
         >
           <p
             class="MuiTypography-root MuiTypography-body2"
@@ -49,7 +49,7 @@ exports[`TransportMode snapshot 1`] = `
           </p>
         </li>
         <li
-          class="css-4f9su3-CargoElement e10s3xmb5"
+          class="css-bru13b-CargoElement eu79uap5"
         >
           <p
             class="MuiTypography-root MuiTypography-body2"
@@ -75,13 +75,13 @@ exports[`TransportMode snapshot 1`] = `
       />
     </svg>
     <div
-      class="css-cyp1hf-ElementContainer e10s3xmb1"
+      class="css-1nd1wvf-ElementContainer eu79uap1"
     >
       <div
-        class="css-dkiy58-CopyContainer e10s3xmb2"
+        class="css-b182ra-CopyContainer eu79uap2"
       >
         <p
-          class="MuiTypography-root css-1z12hes-Copy e10s3xmb3 MuiTypography-body1"
+          class="MuiTypography-root css-1polke6-Copy eu79uap3 MuiTypography-body1"
         >
           Saarbrücker Str. 38, 10405 Berlin
         </p>

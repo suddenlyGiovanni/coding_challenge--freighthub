@@ -3,7 +3,7 @@
 exports[`ShipmentsListElement snapshot 1`] = `
 <div>
   <li
-    class="css-15dgqpj-ListElementContainer e1j9lps20"
+    class="css-1l57fd2-ListElementContainer e8me0d10"
   >
     <div
       class="MuiPaper-root MuiPaper-elevation1 MuiCard-root MuiPaper-rounded"
@@ -15,13 +15,13 @@ exports[`ShipmentsListElement snapshot 1`] = `
         type="button"
       >
         <div
-          class="MuiCardContent-root css-1pkqxp1-StyledCardContent e1j9lps21"
+          class="MuiCardContent-root css-1pomfrd-StyledCardContent e8me0d11"
         >
           <div
-            class="css-131dfi5-HeadingContainer e1j9lps22"
+            class="css-f4l74i-HeadingContainer e8me0d12"
           >
             <div
-              class="css-nsoenc-HeadingDetail e1j9lps23"
+              class="css-fue0wc-HeadingDetail e8me0d13"
             >
               <svg
                 aria-hidden="true"
@@ -40,13 +40,13 @@ exports[`ShipmentsListElement snapshot 1`] = `
                 />
               </svg>
               <p
-                class="MuiTypography-root css-172tmyu-Heading e1j9lps24 MuiTypography-body1"
+                class="MuiTypography-root css-17328ce-Heading e8me0d14 MuiTypography-body1"
               >
                 S1000
               </p>
             </div>
             <div
-              class="css-nsoenc-HeadingDetail e1j9lps23"
+              class="css-fue0wc-HeadingDetail e8me0d13"
             >
               <svg
                 aria-hidden="true"
@@ -64,13 +64,13 @@ exports[`ShipmentsListElement snapshot 1`] = `
                 />
               </svg>
               <p
-                class="MuiTypography-root css-172tmyu-Heading e1j9lps24 MuiTypography-body1"
+                class="MuiTypography-root css-17328ce-Heading e8me0d14 MuiTypography-body1"
               >
                 U1000
               </p>
             </div>
             <div
-              class="css-nsoenc-HeadingDetail e1j9lps23"
+              class="css-fue0wc-HeadingDetail e8me0d13"
             >
               <svg
                 aria-hidden="true"
@@ -88,20 +88,20 @@ exports[`ShipmentsListElement snapshot 1`] = `
                 />
               </svg>
               <p
-                class="MuiTypography-root css-172tmyu-Heading e1j9lps24 MuiTypography-body2 MuiTypography-noWrap"
+                class="MuiTypography-root css-17328ce-Heading e8me0d14 MuiTypography-body2 MuiTypography-noWrap"
               >
                 T-shirts from Shanghai to Hamburg
               </p>
             </div>
           </div>
           <div
-            class="css-1fo4s6c-TrackingContainer e1j9lps25"
+            class="css-a14iro-TrackingContainer e8me0d15"
           >
             <div
-              class="css-1d6dqeu-OverviewContainer ecukxon0"
+              class="css-i6u61p-OverviewContainer e8gzhee0"
             >
               <div
-                class="css-178mkk4-LocationContainer e17eqbe40"
+                class="css-1satmnw-LocationContainer e1cot6dd0"
               >
                 <svg
                   aria-hidden="true"
@@ -119,7 +119,7 @@ exports[`ShipmentsListElement snapshot 1`] = `
                   />
                 </svg>
                 <p
-                  class="MuiTypography-root css-i8g5x1-PlaceName e17eqbe41 MuiTypography-body2 MuiTypography-noWrap"
+                  class="MuiTypography-root css-192817u-PlaceName e1cot6dd1 MuiTypography-body2 MuiTypography-noWrap"
                   data-testid="place-name"
                   style="left: 0px;"
                 >
@@ -127,7 +127,7 @@ exports[`ShipmentsListElement snapshot 1`] = `
                 </p>
               </div>
               <div
-                class="css-ukvtdo-Temp ecukxon1"
+                class="css-1lfx6p1-Temp e8gzhee1"
               >
                 <div
                   aria-valuenow="50"
@@ -142,7 +142,7 @@ exports[`ShipmentsListElement snapshot 1`] = `
                 </div>
               </div>
               <div
-                class="css-178mkk4-LocationContainer e17eqbe40"
+                class="css-1satmnw-LocationContainer e1cot6dd0"
               >
                 <svg
                   aria-hidden="true"
@@ -160,7 +160,7 @@ exports[`ShipmentsListElement snapshot 1`] = `
                   />
                 </svg>
                 <p
-                  class="MuiTypography-root css-i8g5x1-PlaceName e17eqbe41 MuiTypography-body2 MuiTypography-noWrap"
+                  class="MuiTypography-root css-192817u-PlaceName e1cot6dd1 MuiTypography-body2 MuiTypography-noWrap"
                   data-testid="place-name"
                   style="right: 0px;"
                 >
