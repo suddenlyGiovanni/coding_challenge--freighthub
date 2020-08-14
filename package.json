@@ -19,7 +19,7 @@
     "@material-ui/icons": "4.2.0",
     "@types/lodash": "4.14.134",
     "@types/redux-logger": "3.0.7",
-    "axios": "0.19.0",
+    "axios": "0.19.2",
     "cuid": "2.1.6",
     "json-server": "0.15.0",
     "lodash": "4.17.11",
